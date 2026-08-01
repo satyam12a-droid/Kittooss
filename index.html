@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Kittooss ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#ffd6e8,#ffeef5,#fff8fc);
+overflow-x:hidden;
+color:#444;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+h1{
+font-family:Pacifico;
+font-size:65px;
+color:#ff4f88;
+}
+
+.subtitle{
+font-size:22px;
+margin-top:15px;
+}
+
+button{
+margin-top:40px;
+padding:15px 35px;
+border:none;
+background:#ff4f88;
+color:white;
+font-size:18px;
+border-radius:50px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+.section{
+padding:70px 20px;
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.1);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:18px;
+}
+
+#letter{
+display:none;
+margin-top:30px;
+animation:fade .8s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);} 
+to{opacity:1;transform:translateY(0);} 
+}
+
+.heart{
+position:fixed;
+bottom:-30px;
+font-size:24px;
+animation:float 10s linear infinite;
+opacity:.8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+100%{
+transform:translateY(-120vh) rotate(360deg);
+}
+}
+
+footer{
+padding:30px;
+text-align:center;
+color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+<h1>Happy Birthday ❤️</h1>
+
+<h2 style="color:#ff6b9d;">My Dearest Kittooss</h2>
+
+<p class="subtitle">
+Every day with you is a gift.
+Today is all about celebrating the wonderful person you are.
+</p>
+
+<button onclick="showLetter()">
+Open My Heart 💌
+</button>
+
+</div>
+
+<div class="section">
+
+<div class="card">
+
+<h2>To My Special Person 🌸</h2>
+
+<div id="letter">
+
+<p style="font-size:18px;line-height:1.9;margin-top:20px;">
+
+Happy Birthday, Kittooss ❤️
+
+Today isn't just another day—it's the day someone truly wonderful came into the world.
+
+I hope this year brings you countless reasons to smile, moments that make your heart feel light, and dreams that slowly become reality.
+
+Thank you for being the amazing person you are. Your kindness, your smile, and the way you make ordinary moments feel special mean more to me than words can fully express.
+
+No matter where life takes us, I hope your birthday is filled with happiness, love, laughter, and beautiful memories.
+
+You deserve all the good things this world has to offer.
+
+Happy Birthday once again, my special person.
+
+❤️
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Our Memories 📸</h2>
+
+<p>Add your favorite photos here.</p>
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+
+</div>
+
+</div>
+
+<footer>
+
+Made with ❤️ especially for Kittooss
+
+</footer>
+
+<script>
+
+function showLetter(){
+document.getElementById("letter").style.display="block";
+window.scrollTo({
+top:document.getElementById("letter").offsetTop-100,
+behavior:"smooth"
+});
+}
+
+function hearts(){
+const heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="💖";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(20+Math.random()*25)+"px";
+heart.style.animationDuration=(6+Math.random()*5)+"s";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},11000);
+}
+
+setInterval(hearts,400);
+
+</script>
+
+</body>
+</html>
